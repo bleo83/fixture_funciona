@@ -1,3 +1,5 @@
+//NO CARGA CUARTOS DE FINAL
+
 function refrezcarCalculos() {
     //alert("refrezcando");
     inicializada = false;
@@ -57,10 +59,10 @@ function recalculando(grupo) {
     }
 }
 function limpiarClasificacion(grupo) {
-    document.getElementById("pais1" + grupo).value = "1° Grupo " + grupo;
+    document.getElementById("pais1" + grupo).innerHTML = "1° Grupo " + grupo;
     document.getElementById("bandera1" + grupo).src = "banderas/black.png";
     document.getElementById(limpiarPartidoOctavos("1" + grupo))
-    document.getElementById("pais2" + grupo).value = "2° Grupo " + grupo;
+    document.getElementById("pais2" + grupo).innerHTML = "2° Grupo " + grupo;
     document.getElementById("bandera2" + grupo).src = "banderas/black.png";
     document.getElementById(limpiarPartidoOctavos("2" + grupo))
 }
@@ -184,21 +186,15 @@ function printEquipoEnTabla(grupo, elementoFila, equipo) {
     document.getElementById(elementoFila + grupo + "df").innerHTML = equipo.difGol;
 
     if (elementoFila.substr(6, 1) == "1") {
-        eqOrig = document.getElementById("pais1" + grupo).value;
+        //crear tag imagen para bandera wikipediar
         document.getElementById("pais1" + grupo).value = equipo.pais;
         document.getElementById("bandera1" + grupo).src = getBandera(equipo.pais);
-        if(eqOrig == equipo.pais && inicializada == true){
-        	limpiarPartidoOctavos("1" + grupo);
-        }
     }
 
     if (elementoFila.substr(6, 1) == "2") {
-        eqOrig=document.getElementById("pais2" + grupo).value;
-        document.getElementById("pais2" + grupo).value = equipo.pais;
+        //crear tag imagen para bandera wikipediar
+        document.getElementById("pais2" + grupo).value= equipo.pais;
         document.getElementById("bandera2" + grupo).src = getBandera(equipo.pais);
-        if(eqOrig == equipo.pais && inicializada == true){
-        	limpiarPartidoOctavos("2" + grupo);
-        }
     }
 
 
@@ -334,14 +330,14 @@ function getBandera(pais) {
         case "Egipto":
             return "banderas/Egipto.png";
             break;
+        case "Uruguay":
+            return "banderas/Uruguay.png";
+            break;
         case "Portugal":
             return "banderas/Portugal.png";
             break;
         case "Espana":
             return "banderas/Espana.png";
-            break;
-        case "Uruguay":
-            return "banderas/Uruguay.png";
             break;
         case "Marruecos":
             return "banderas/Marruecos.png";
@@ -478,11 +474,11 @@ function clasificando(disparador) {
     local = "";
     visita = "";
     if (fase == "oc") {
-        local = document.getElementById("pais" + getClasGrupo(partido + "l")).value;
-        visita = document.getElementById("pais" + getClasGrupo(partido + "v")).value;
+        local = document.getElementById("pais" + getClasGrupo(partido + "l")).innerHTML;
+        visita = document.getElementById("pais" + getClasGrupo(partido + "v")).innerHTML;
     } else {
-        local = document.getElementById(fase + "pais" + partido + "l").value;
-        visita = document.getElementById(fase + "pais" + partido + "v").value;
+        local = document.getElementById(fase + "pais" + partido + "l").innerHTML;
+        visita = document.getElementById(fase + "pais" + partido + "v").innerHTML;
     }
 
     golL = document.getElementById(fase + "gl" + partido + "l").value;
@@ -541,27 +537,25 @@ function getProximoRival(id) {
 }
 function clasificar(partido, fase, nombreEquipoG, nombreEquipoP) {
     if (fase != "fi" && fase != "tc") {
-        equipoOrig = document.getElementById(getIdProxPartido("pais", true, partido, fase)).value;
+        equipoOrig = document.getElementById(getIdProxPartido("pais", true, partido, fase)).innerHTML;
         //si la clasificacion es distinta a la que estaba
-        if (equipoOrig != nombreEquipoG || inicializada == false) {
+        if (equipoOrig != nombreEquipoG) {
             //si los datos están completos
-            //alert(partido+" "+fase+" "+nombreEquipoG+" "+nombreEquipoP);
             if (nombreEquipoG != null) {
                 //cargo el equipo en la siguiente ronda
-                //alert("paisprox "+getIdProxPartido("pais", true, partido, fase)+"bandprox "+getIdProxPartido("bandera", true, partido, fase));
-                document.getElementById(getIdProxPartido("pais", true, partido, fase)).value = nombreEquipoG;
+                document.getElementById(getIdProxPartido("pais", true, partido, fase)).innerHTML = nombreEquipoG;
                 document.getElementById(getIdProxPartido("bandera", true, partido, fase)).src = getBandera(nombreEquipoG);
                 if (fase == "sf") {
-                    document.getElementById(getIdProxPartido("pais", false, partido, fase)).value = nombreEquipoP;
+                    document.getElementById(getIdProxPartido("pais", false, partido, fase)).innerHTML = nombreEquipoP;
                     document.getElementById(getIdProxPartido("bandera", false, partido, fase)).src = getBandera(nombreEquipoP);
                 }
             } else {
                 //cargo el equipo por default
 
-                document.getElementById(getIdProxPartido("pais", true, partido, fase)).value = getNombrePaisDefault(getIdProxPartido("gl", true, partido, fase));
+                document.getElementById(getIdProxPartido("pais", true, partido, fase)).innerHTML = getNombrePaisDefault(getIdProxPartido("gl", true, partido, fase));
                 document.getElementById(getIdProxPartido("bandera", true, partido, fase)).src = "/banderas/black.png";
                 if (fase == "sf") {
-                    document.getElementById(getIdProxPartido("pais", false, partido, fase)).value = getNombrePaisDefault(getIdProxPartido("gl", false, partido, fase));
+                    document.getElementById(getIdProxPartido("pais", false, partido, fase)).innerHTML = getNombrePaisDefault(getIdProxPartido("gl", false, partido, fase));
                     document.getElementById(getIdProxPartido("bandera", false, partido, fase)).src = "/banderas/black.png";
                 }
             }
@@ -589,21 +583,21 @@ function clasificar(partido, fase, nombreEquipoG, nombreEquipoP) {
         }
     } else {
         if (fase == "fi") {
-            equipoOrig = document.getElementById("capais").value;
+            //equipoOrig = document.getElementById(getIdProxPartido("pais", true, partido, fase)).innerHTML;
             //si la clasificacion es distinta a la que estaba
-            if (equipoOrig != nombreEquipoG || inicializada == false) {
+            if (equipoOrig != nombreEquipoG) {
                 //si los datos están completos
                 //alert(nombreEquipoG+" gp "+nombreEquipoP);
                 if (nombreEquipoG != null) {
                     //cargo el equipo en la siguiente ronda
-                    document.getElementById("capais").value = nombreEquipoG;
+                    //document.getElementById(getIdProxPartido("pais", true, partido, fase)).innerHTML = nombreEquipoG;
                     //alert(nombreEquipoG);
-                    document.getElementById("cabandera").src = getBandera(nombreEquipoG);
+                    document.getElementById(getIdProxPartido("bandera", true, partido, fase)).src = getBandera(nombreEquipoG);
                 } else {
                     //cargo el equipo por default
 
-                    document.getElementById("capais").value = "Campeon";
-                    document.getElementById("cabandera").src = "/banderas/black.png";
+                    document.getElementById(getIdProxPartido("pais", true, partido, fase)).innerHTML = "Campeon";
+                    document.getElementById(getIdProxPartido("bandera", true, partido, fase)).src = "/banderas/black.png";
 
                 }
             }

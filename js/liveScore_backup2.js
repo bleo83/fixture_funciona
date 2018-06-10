@@ -343,8 +343,8 @@ function getBandera(pais) {
         case "Holanda":
             return "banderas/Holanda.png";
             break;
-        case "Chile":
-            return "banderas/Chile.png";
+        case "Egipto":
+            return "banderas/Egipto.png";
             break;
         case "Australia":
             return "banderas/Australia.png";

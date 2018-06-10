@@ -120,14 +120,14 @@ else
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Password</label>
 						<div class="col-sm-10">
-							<input type="password" name="pass" id="accountpassword"  class="form-control" placeholder="Password" style="max-width:1500px;float:left;">
+							<input type="password" name="pass1" id="accountpassword"  class="form-control" placeholder="Password" style="max-width:1500px;float:left;">
 						</div>
 					</div>
 					
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Repetir Password</label>
 						<div class="col-sm-10">
-							<input type="repassword" name="repass" id="accountrepassword"  class="form-control"  placeholder="Repetir Password" style="max-width:1500px;float:left;">
+							<input type="repassword" name="repass1" id="accountrepassword"  class="form-control"  placeholder="Repetir Password" style="max-width:1500px;float:left;">
 						</div>
 					</div>
 					

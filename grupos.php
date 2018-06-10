@@ -263,7 +263,7 @@ $userlogin = $_SESSION['usuario'];
 										?>
 										<tr name="partido">
 										<div id="local">
-                                        <td width="2"><img alt="?" src="banderas/black.png" id="bandera1<?php echo $ofname1[$b]?>"></td>
+                                        <td width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="bandera1<?php echo $ofname1[$b]?>"></td>
 										<td style ="background: transparent;" >
 										<input type="text" readonly = "readonly" style ="background: transparent; max-widht =50px; color: yellow"   id="pais1<?php echo $ofname1[$b]?>" name="pais1<?php echo $ofname1[$b]?>" align="center" value ="">
 										</td>
@@ -281,7 +281,7 @@ $userlogin = $_SESSION['usuario'];
 										<td style ="background: transparent;">
 <input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;"   id="pais2<?php echo $ofname2[$b]?>" name="pais2<?php echo $ofname2[$b]?>" align="center" value ="">
 										</td>
-										<td  width="2"><img alt="?" src="banderas/black.png" id="bandera2<?php echo $ofname2[$b]?>"> </td>
+										<td  width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="bandera2<?php echo $ofname2[$b]?>"> </td>
 										</div>
 										</tr>
 										<?php }?>
@@ -318,7 +318,7 @@ $userlogin = $_SESSION['usuario'];
 										?>
 										<tr name="partido">
 										<div id="local">
-										<td width="2"><img alt="?" src="banderas/black.png" id="cubandera<?php echo $k."l"?>"> </td>
+										<td width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="cubandera<?php echo $k."l"?>"> </td>
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="cupais<?php echo $k."l"?>"  name="cupais<?php echo $k."l"?>"  align="center" value="">
 										</td>
@@ -338,7 +338,7 @@ $userlogin = $_SESSION['usuario'];
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="cupais<?php echo $k."v"?>" name="cupais<?php echo $k."v"?>"value="">
 										</td>
-										<td  width="2"><img alt="?" src="banderas/black.png" id="cubandera<?php echo $k."v"?>"></td>
+										<td  width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="cubandera<?php echo $k."v"?>"></td>
 										</div>
 										</tr>
 										<?php }?>
@@ -380,7 +380,7 @@ $userlogin = $_SESSION['usuario'];
 										?>
 										<tr name="partido">
 										<div id="local">
-										<td width="2"><img alt="?" src="banderas/black.png" id="sfbandera<?php echo $k."l"?>"></td>
+										<td width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="sfbandera<?php echo $k."l"?>"></td>
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="sfpais<?php echo $k."l"?>"  name="sfpais<?php echo $k."l"?>"  align="center" value="">
 										</td>
@@ -397,7 +397,7 @@ $userlogin = $_SESSION['usuario'];
 										<td style ="background: transparent;">
 											<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="sfpais<?php echo $k."v"?>" name="sfpais<?php echo $k."v"?>" value=""> 
 										</td>
-										<td  width="2"><img alt="?" src="banderas/black.png" id="sfbandera<?php echo $k."v"?>"></td>
+										<td  width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="sfbandera<?php echo $k."v"?>"></td>
 										</div>
 										</tr>
 										<?php }?>
@@ -429,7 +429,7 @@ $userlogin = $_SESSION['usuario'];
 										<tr name="partido">
 										<div id="local">
 										<td width="2">
-										<img alt="?" src="banderas/black.png" id="tcbandera1l">
+										<img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="tcbandera1l">
 										</td>
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="tcpais1l" name="tcpais1l"  align="center" value="">
@@ -448,7 +448,7 @@ $userlogin = $_SESSION['usuario'];
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="tcpais1v" name="tcpais1v"  value="">
 										</td>
-                                        <td  width="2"><img alt="?" src="banderas/black.png" id="tcbandera1v"></td>
+                                        <td  width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="tcbandera1v"></td>
 										</div>
 										</tr>
 										
@@ -479,7 +479,7 @@ $userlogin = $_SESSION['usuario'];
 										
 										<tr name="partido">
 										<div id="local">
-										<td width="2"><img alt="?" src="banderas/black.png" id="fibandera1l"></td>
+										<td width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="fibandera1l"></td>
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="fipais1l" name="fipais1l" align="center" value="">
 										</td>
@@ -496,7 +496,7 @@ $userlogin = $_SESSION['usuario'];
 										<td style ="background: transparent;">
 										<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="fipais1v" name="fipais1v" value="">
 										</td>
-										<td  width="2"><img alt="?" src="banderas/black.png" id="fibandera1v"></td>
+										<td  width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="fibandera1v"></td>
 										</div>
 										</tr>
 										
@@ -515,7 +515,7 @@ $userlogin = $_SESSION['usuario'];
 			</h1>
 			<div style="margin-left: 500px; top: -10px;" >
 			
-				<td width="2"><img alt="?" src="banderas/black.png" id="cabandera"></td><br><br><br>
+				<td width="2"><img style="width:70px; height:46px;" alt="?" src="banderas/black.png" id="cabandera"></td><br><br><br>
 				<td style ="background: transparent;">
 				<input type="text" readonly = "readonly" style ="background: transparent; color: yellow; alignment-adjust:center;" id="capais" name="capais"  align="center" value="">
 				</td>
@@ -544,7 +544,7 @@ $userlogin = $_SESSION['usuario'];
 <script src="js/plugins.js"></script>
 <script src="js/common.js"></script>
 <script language="javascript" src="js/Validar.js"></script>
-	<script language="javascript" src="js/liveScore.js"></script>
+<script language="javascript" src="liveScore.js"></script>
 <script>
 /* ---------------------------------------------------------------------- */
 	/*	Accordion
