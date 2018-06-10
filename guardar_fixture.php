@@ -35,14 +35,14 @@ if (isset($_SESSION['usuario'])){
 											  '".${"group$letra"}[$i][2]."',
 											  '".${"group$letra"}[$i][5]."',
 											  ".${"group$letra"}[$i][3].",
-											  ".${"group$letra"}[$i][4].",NULL,NULL)";
+											  ".${"group$letra"}[$i][4].",0,0)";
 					mysqli_query($link,$sql);
 					$check = mysqli_affected_rows($link);				
-					
+					echo "<br>".$sql."<br>";
 					
 					
 		}
-	}echo $sql;
+	}
 	
 	$ko=0;
 		for ($bo=0; $bo<8; $bo++){
