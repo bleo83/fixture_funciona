@@ -15,12 +15,12 @@ if ($_POST['user'] == null || $_POST['pass'] == null)
 }
 else
 {
-    $user = mysqli_real_escape_string($con, $_POST['user']);
+    $email = mysqli_real_escape_string($con, $_POST['user']);
     $pass = mysqli_real_escape_string($con, $_POST['pass']);
-    $consulta = mysqli_query($con, "SELECT user, password FROM user WHERE user = '$user' AND password = '$pass'");
+    $consulta = mysqli_query($con, "SELECT email, password FROM user WHERE email = '$email' AND password = '$pass'");
     if (mysqli_num_rows($consulta) > 0)
     {
-        $_SESSION["usuario"] = $user;
+        $_SESSION["usuario"] = $email;
         echo '<script>location.href = "grupos.php"</script>';
     }
     else

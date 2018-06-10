@@ -1,30 +1,36 @@
+
+
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-echo "USUARIO CREADO";
 $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null;
-$password = isset($_REQUEST['password']) ? $_REQUEST['password'] : null;
+$pass = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
 $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : null;
 $lastname = isset($_REQUEST['lastname']) ? $_REQUEST['lastname'] : null;
 $country = isset($_REQUEST['country']) ? $_REQUEST['country'] : null;
 $company = isset($_REQUEST['company']) ? $_REQUEST['company'] : null;
 
-$conn = mysql_connect("localhost", "admzonarg", "catarojo1") or die ("que no hay conexion");
+//Connection Details
+$servername = "localhost";
+$username = "adm_fixture";
+$password = "catarojo1";
+$dbname = "fixture";
 
-$q = mysql_db_query("fixture", "INSERT INTO user (email,password,name,lastname,country,company) VALUES ('$email','$password','$name','$lastname','$country','$company')");
-// mysql_db_query("fixture", "INSERT INTO prode (user,pass,email,name,lastname,country,company) VALUES ('".$user."')");
-// mysql_db_query("fixture", "INSERT INTO prode (user,pass,email,name,lastname,country,company) VALUES ('{$user}')");
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 
-/*
-var_dump( mysql_affected_rows() );
+$sql = "INSERT INTO user (email,password,name,lastname,country,company)
+VALUES ('$email','$pass','$name','$lastname','$country','$company')";
 
+if ($conn->query($sql) === TRUE) {
+    echo "Nuevo Usuario Creado exitosamente";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
+$conn->close();
+?>
 
-
-var_dump( mysql_insert_id() );
-*/

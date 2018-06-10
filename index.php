@@ -120,14 +120,14 @@ else
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Password</label>
 						<div class="col-sm-10">
-							<input type="password" name="password" id="accountpassword"  class="form-control" placeholder="Password" style="max-width:1500px;float:left;">
+							<input type="password" name="pass" id="accountpassword"  class="form-control" placeholder="Password" style="max-width:1500px;float:left;">
 						</div>
 					</div>
 					
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Repetir Password</label>
 						<div class="col-sm-10">
-							<input type="password" name="repassword" id="accountrepassword"  class="form-control"  placeholder="Repetir Password" style="max-width:1500px;float:left;">
+							<input type="repassword" name="repass" id="accountrepassword"  class="form-control"  placeholder="Repetir Password" style="max-width:1500px;float:left;">
 						</div>
 					</div>
 					
@@ -173,9 +173,9 @@ document.getElementById('accountlastname').value, document.getElementById('accou
         function ValidarFormAccount(mail, pass, repass, name,lastname,country,company)
         {
             $.ajax({
-                url: "registro.php",
+                url: "php/registro.php",
                 type: "POST",
-                data: "mail="+mail+"&pass="+pass+"&repass="+repass+"&name="+name+"&lastname="+lastname+"&country="+country+"&company="+company,
+                data: "email="+mail+"&pass="+pass+"&repass="+repass+"&name="+name+"&lastname="+lastname+"&country="+country+"&company="+company,
                 success: function(resp){
                     $('#createAccountError').html(resp)
                 }        
