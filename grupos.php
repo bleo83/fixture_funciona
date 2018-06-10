@@ -114,9 +114,9 @@ $userlogin = $_SESSION['usuario'];
 										?>
 										<tr name="partido">
 										<div id="local">
-										<td width="2"><img src="banderas/<?php echo ${"group$letra"}[$i][2]?>.png" alt="imagen"/> </td>
+										<td width="2" ><img style="width:70px; height:46px;" src="banderas/<?php echo ${"group$letra"}[$i][2]?>.png" alt="imagen"/> </td>
 										<td id="pais<?php echo $name?>l"  align="center" ><?php echo ${"group$letra"}[$i][2]?></td>
-										<td s width="2"><input style="max-width:50px "  type="number" min="0" max="9" size="2" id="gol<?php echo $name?>l" name="gol<?php echo $name?>l" value="" onchange="recalculando('<?php echo $letra?>')" onblur="recalculando('<?php echo $letra?>')"
+										<td width="2"><input style="max-width:50px "  type="number" min="0" max="9" size="2" id="gol<?php echo $name?>l" name="gol<?php echo $name?>l" value="" onchange="recalculando('<?php echo $letra?>')" onblur="recalculando('<?php echo $letra?>')"
 										onkeypress="return isNumber(event)" /></td>
 										
 										</div>
@@ -125,7 +125,7 @@ $userlogin = $_SESSION['usuario'];
 										<td width="2"><input style="max-width:50px " type="number" min="0" max="9" size="2" id="gol<?php echo $name?>v" name="gol<?php echo $name?>v" value="" onchange="recalculando('<?php echo $letra?>')" onblur="recalculando('<?php echo $letra?>')"
 										onkeypress="return isNumber(event)"/></td>
 										<td id="pais<?php echo $name?>v" align="center" ><?php echo ${"group$letra"}[$i][5]?></td>
-										<td  width="2"><img src="banderas/<?php echo ${"group$letra"}[$i][5]?>.png" alt="imagen"/> </td>
+										<td  width="2"><img style="width:70px; height:46px;" src="banderas/<?php echo ${"group$letra"}[$i][5]?>.png" alt="imagen"/> </td>
 										</div>
 										</tr>
 										<?php }?>

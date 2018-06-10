@@ -14,67 +14,67 @@ $semifinal=array ("I","II");
 
 
 $groupa = array (                      
-			array(1,"GrupoA","Brasil","","","Croacia"),
-			array(2,"GrupoA","Mexico","","","Camerun"),
-			array(17,"GrupoA","Brasil","","","Mexico"),
-			array(18,"GrupoA","Camerun","","","Croacia"),
-			array(33,"GrupoA","Camerun","","","Brasil"),
-			array(34,"GrupoA","Croacia","","","Mexico"),);
+			array(1,"GrupoA","Rusia","","","Egipto"),
+			array(2,"GrupoA","A.Saudita","","","Uruguay"),
+			array(17,"GrupoA","Rusia","","","Uruguay"),
+			array(18,"GrupoA","Egipto","","","A.Saudita"),
+			array(33,"GrupoA","Uruguay","","","A.Saudita"),
+			array(34,"GrupoA","Rusia","","","Egipto"),);
 										
 $groupb = array (                      
-			array(3,"GrupoB","Espana","","","Holanda"),
-			array(4,"GrupoB","Chile","","","Australia"),
-			array(19,"GrupoB","Espana","","","Chile"),
-			array(20,"GrupoB","Australia","","","Holanda"),
-			array(35,"GrupoB","Holanda","","","Chile"),
-			array(36,"GrupoB","Australia","","","Espana"),);
+			array(3,"GrupoB","Marruecos","","","Portugal"),
+			array(4,"GrupoB","Iran","","","Espana"),
+			array(19,"GrupoB","Portugal","","","Iran"),
+			array(20,"GrupoB","Marruecos","","","Espana"),
+			array(35,"GrupoB","Iran","","","Espana"),
+			array(36,"GrupoB","Portugal","","","Marruecos"),);
 										
 										
 $groupc = array (                      
-			array(5,"GrupoC","Colombia","","","Grecia"),
-			array(6,"GrupoC","C. de Marfil","","","Japon"),
-			array(21,"GrupoC","Colombia","","","C. de Marfil"),
-			array(22,"GrupoC","Japon","","","Grecia"),
-			array(37,"GrupoC","Japon","","","Colombia"),
-			array(38,"GrupoC","Grecia","","","C. de Marfil"));
+			array(5,"GrupoC","Francia","","","Peru"),
+			array(6,"GrupoC","Australia","","","Dinamarca"),
+			array(21,"GrupoC","Francia","","","Dinamarca"),
+			array(22,"GrupoC","Peru","","","Australia"),
+			array(37,"GrupoC","Dinamarca","","","Australia"),
+			array(38,"GrupoC","Francia","","","Peru"));
 											
 $groupd = array (                      
-			array(7,"GrupoD","Uruguay","","","Costa Rica"),
-			array(8,"GrupoD","Inglaterra","","","Italia"),
-			array(23,"GrupoD","Uruguay","","","Inglaterra"),
-			array(24,"GrupoD","Italia","","","Costa Rica"),
-			array(39,"GrupoD","Italia","","","Uruguay"),
-			array(40,"GrupoD","Costa Rica","","","Inglaterra"));								
+			array(7,"GrupoD","Argentina","","","Croacia"),
+			array(8,"GrupoD","Islandia","","","Nigeria"),
+			array(23,"GrupoD","Argentina","","","Nigeria"),
+			array(24,"GrupoD","Croacia","","","Islandia"),
+			array(39,"GrupoD","Nigeria","","","Islandia"),
+			array(40,"GrupoD","Argentina","","","Croacia"));								
 
 $groupe = array (                      
-			array(9,"GrupoE","Suiza","","","Ecuador"),
-			array(10,"GrupoE","Francia","","","Honduras"),
-			array(25,"GrupoE","Suiza","","","Francia"),
-			array(26,"GrupoE","Honduras","","","Ecuador"),
-			array(41,"GrupoE","Honduras","","","Suiza"),
-			array(42,"GrupoE","Ecuador","","","Francia"));
+			array(9,"GrupoE","Costa Rica","","","Brasil"),
+			array(10,"GrupoE","Serbia","","","Suiza"),
+			array(25,"GrupoE","Brasil","","","Serbia"),
+			array(26,"GrupoE","Costa Rica","","","Suiza"),
+			array(41,"GrupoE","Serbia","","","Suiza"),
+			array(42,"GrupoE","Brasil","","","Costa Rica"));
 $groupf = array (                      
-			array(11,"GrupoF","Argentina","","","Bosnia"),
-			array(12,"GrupoF","Iran","","","Nigeria"),
-			array(27,"GrupoF","Argentina","","","Iran"),
-			array(28,"GrupoF","Nigeria","","","Bosnia"),
-			array(43,"GrupoF","Nigeria","","","Argentina"),
-			array(44,"GrupoF","Bosnia","","","Iran"));
+			array(11,"GrupoF","Alemania","","","Suecia"),
+			array(12,"GrupoF","Mexico","","","Corea del Sur"),
+			array(27,"GrupoF","Alemania","","","Corea del Sur"),
+			array(28,"GrupoF","Suecia","","","Mexico"),
+			array(43,"GrupoF","Corea del Sur","","","Mexico"),
+			array(44,"GrupoF","Alemania","","","Suecia"));
 $groupg =  array (                      
-			array(13,"GrupoG","Alemania","","","Portugal"),
-			array(14,"GrupoG","Ghana","","","EEUU"),
-			array(29,"GrupoG","Alemania","","","Ghana"),
-			array(30,"GrupoG","EEUU","","","Portugal"),
-			array(45,"GrupoG","EEUU","","","Alemania"),
-			array(46,"GrupoG","Portugal","","","Ghana"));
+			array(13,"GrupoG","Belgica","","","Tunez"),
+			array(14,"GrupoG","Panama","","","Inglaterra"),
+			array(29,"GrupoG","Belgica","","","Inglaterra"),
+			array(30,"GrupoG","Tunez","","","Panama"),
+			array(45,"GrupoG","Inglaterra","","","Panama"),
+			array(46,"GrupoG","Belgica","","","Tunez"));
 			
 $grouph =  array (                      
-			array(15,"GrupoH","Belgica","","","Argelia"),
-			array(16,"GrupoH","Rusia","","","Corea del Sur"),
-			array(31,"GrupoH","Belgica","","","Rusia"),
-			array(32,"GrupoH","Corea del Sur","","","Argelia"),
-			array(47,"GrupoH","Corea del Sur","","","Belgica"),
-			array(48,"GrupoH","Argelia","","","Rusia"));
+			array(15,"GrupoH","Polonia","","","Colombia"),
+			array(16,"GrupoH","Senegal","","","Japon"),
+			array(31,"GrupoH","Polonia","","","Japon"),
+			array(32,"GrupoH","Polonia","","","Japon"),
+			array(47,"GrupoH","Japon","","","Senegal"),
+			array(48,"GrupoH","Polonia","","","Colombia"));
 			
 $octavos = array (                      
 			array(49,"Octavos","","",0,0,0,0),

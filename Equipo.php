@@ -238,7 +238,7 @@ class Fixture {
 
     public static $equipo1b = array("1b", "Portugal", "bandera/Portugal.png");
 
-    public static $equipo2b = array("2b", "España", "bandera/España.png");
+    public static $equipo2b = array("2b", "Espana", "bandera/Espana.png");
 
     public static $equipo3b = array("3b", "Marruecos", "bandera/Marruecos.png");
 
