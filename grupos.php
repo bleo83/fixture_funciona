@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!="TRUE"))
+if (isset($_SESSION['usuario']))
 {
 ?>
 <?php

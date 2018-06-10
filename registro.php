@@ -13,7 +13,6 @@ $name = $_POST["name"];
 $lastname = $_POST["lastname"];
 $country= "Argentina";
 $company= 1;
-$idface = "";
 $victoriaOK=0;
 $DifGolOK=0;
 $GolesOK=0;
@@ -35,7 +34,6 @@ require 'conexion.php';
 											  '".$lastname."',
 											  '".$country."',
 											  ".$company.",
-											  NULL,
 											  ".$victoriaOK.",
 											  ".$DifGolOK.",
 											  ".$GolesOK.",

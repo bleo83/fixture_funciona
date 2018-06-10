@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario']))
 	$resultado = mysqli_query($link,$sqluser);
 	$resultado2 = mysqlI_fetch_assoc ($resultado);
 	
-	$userlogin = $resultado2 [id];
+	$userlogin = $resultado2;
 	
 	//echo $userlogin;
 	
@@ -39,7 +39,7 @@ if (isset($_SESSION['usuario']))
 											  ".${"group$letra"}[$i][4].",NULL,NULL)";
 					mysqli_query($link,$sql);
 					$check = mysqli_affected_rows($link);				
-					echo $check;
+					//echo $check;
 					
 					
 		}
@@ -213,9 +213,21 @@ $ks=0;
 											  ".$tercer[0][5].",
 											  ".$tercer[0][6].",
 											  ".$tercer[0][7].")";
-					mysqli_query($link,$sqltercer);
-					$check4 = mysqli_affected_rows($link);
-					//echo "<br>".$check4."<br>";
+					//$result = mysqli_query($link,$sqltercer);
+					// mysqli_free_result($result);
+					// mysqli_free_result($result);
+					//printf ("New Record-1 has id %d.\n", mysqli_insert_id($link));
+					
+					// echo "<br/>";
+					// var_dump($sqltercer);
+					// echo "<br/>";
+					// var_dump(mysqli_affected_rows($link));
+					// echo "<br/>";
+					
+					// var_dump(sqlite_last_insert_rowid($link));
+					
+					// $check4 = mysqli_affected_rows($link);
+					// echo "<br>".$check4."<br>";
 					
 //INICIO DE FINAL
 
@@ -226,21 +238,22 @@ $ks=0;
 			$final [0][5] = $_POST [figl1v];
 			$final [0][6] = $_POST [figp1l];
 			$final [0][7] = $_POST [figp1v];
-			
+
 			if ($final[0][6] == "" && $final[0][7] =="" ){
 					$final[0][6] = 0;
 					$final[0][7] = 0;
 				
-			}
-			echo $final [0][0];
-			echo $final [0][1];
-			echo $final [0][2];
-			echo $final [0][3];
-			echo $final [0][4];
-			echo $final [0][5];
-			echo $final [0][6];
-			echo $final [0][7];
-				echo "<br>";
+			}			
+			
+			//echo $final [0][0];
+			//echo $final [0][1];
+			//echo $final [0][2];
+			//echo $final [0][3];
+			//echo $final [0][4];
+			//echo $final [0][5];
+			//echo $final [0][6];
+			//echo $final [0][7];
+				//echo "<br>";
 					$sqlfinal ="INSERT INTO pronostico VALUES (NULL,".$userlogin.",
 											  ".$final[0][0].",
 											  '".$final[0][1]."',
@@ -250,9 +263,22 @@ $ks=0;
 											  ".$final[0][5].",
 											  ".$final[0][6].",
 											  ".$final[0][7].")";
-					mysqli_query($link,$sqlfinal);
-					$check5 = mysqli_affected_rows($link);
-					echo "<br>".$check5."<br>";
+					
+					// var_dump($sqltfinal);
+					
+					$result = mysqli_query($link,$sqlfinal);
+					mysqli_free_result($result);
+					printf ("New Record-2 has id %d.\n", mysqli_insert_id($link));
+					
+					
+					
+					// var_dump(mysqli_error($link));
+					
+					// var_dump(sqlite_last_insert_rowid($link));
+					
+					// $check5 = mysqli_affected_rows($link);
+					// echo "<br>".$check5."<br>";
+					//var_dump($check5);
 
 //INICIO DE CAMPEON
 
@@ -266,6 +292,6 @@ $ks=0;
 					mysqli_query($link,$sqlcampeon);
 					$check6 = mysqli_affected_rows($link);
 					echo "<br>".$check6."<br>";
-mysqli_close($link);
+// mysqli_close($link);
 }
     ?>

@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario']))
 	$resultado = mysqli_query($link,$sqluser);
 	$resultado2 = mysqlI_fetch_assoc ($resultado);
 	
-	$userlogin = $resultado2;
+	$userlogin = $resultado2 [id];
 	
 	
 	
