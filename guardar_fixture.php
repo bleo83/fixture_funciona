@@ -42,7 +42,7 @@ if (isset($_SESSION['usuario'])){
 					
 					
 		}
-	}
+	}echo $sql;
 	
 	$ko=0;
 		for ($bo=0; $bo<8; $bo++){
@@ -84,8 +84,10 @@ if (isset($_SESSION['usuario'])){
 											  ".$octavos[$bo][7].")";
 					mysqli_query($link,$sqloct);
 					$check1 = mysqli_affected_rows($link);
+										echo $check1;
+
 					
-		}			
+		}		echo $sqloct;	
 					
 //INCIO CUARTOS DE FINAL
 
@@ -182,12 +184,12 @@ $ks=0;
 //INICIO DE TERCER Y CUARTO PUESTO
 
 		
-			$tercer [0][2] = $_POST [tcpais1l];
-			$tercer [0][3] = $_POST [tcpais1v];
-			$tercer [0][4] = $_POST [tcgl1l];
-			$tercer [0][5] = $_POST [tcgl1v];
-			$tercer [0][6] = $_POST [tcgp1l];
-			$tercer [0][7] = $_POST [tcgp1v];
+			$tercer [0][2] = $_POST ['tcpais1l'];
+			$tercer [0][3] = $_POST ['tcpais1v'];
+			$tercer [0][4] = $_POST ['tcgl1l'];
+			$tercer [0][5] = $_POST ['tcgl1v'];
+			$tercer [0][6] = $_POST ['tcgp1l'];
+			$tercer [0][7] = $_POST ['tcgp1v'];
 			
 			if ($tercer[0][6] == "" && $tercer[0][7] =="" ){
 					$tercer[0][6] = 0;
@@ -219,12 +221,12 @@ $ks=0;
 //INICIO DE FINAL
 
 		
-			$final [0][2] = $_POST [fipais1l];
-			$final [0][3] = $_POST [fipais1v];
-			$final [0][4] = $_POST [figl1l];
-			$final [0][5] = $_POST [figl1v];
-			$final [0][6] = $_POST [figp1l];
-			$final [0][7] = $_POST [figp1v];
+			$final [0][2] = $_POST ['fipais1l'];
+			$final [0][3] = $_POST ['fipais1v'];
+			$final [0][4] = $_POST ['figl1l'];
+			$final [0][5] = $_POST ['figl1v'];
+			$final [0][6] = $_POST ['figp1l'];
+			$final [0][7] = $_POST ['figp1v'];
 			
 			if ($final[0][6] == "" && $final[0][7] =="" ){
 					$final[0][6] = 0;
@@ -248,7 +250,7 @@ $ks=0;
 //INICIO DE CAMPEON
 
 		
-			$campeon = $_POST [capais];
+			$campeon = $_POST ['capais'];
 					
 		
 			

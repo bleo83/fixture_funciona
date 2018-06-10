@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario']))
 	include "partidos.php";
 	
 	$userlogin = $_SESSION['usuario'];
-	echo $userlogin."<br>";
+	echo $userlogin;
 	
 	
 	
@@ -29,13 +29,12 @@ if (isset($_SESSION['usuario']))
 											  ".${"group$letra"}[$i][3].",
 											  ".${"group$letra"}[$i][4].",NULL,NULL)";
 					mysqli_query($link,$sql);
-					$check = mysqli_affected_rows($link);	
-					echo "<br>".$check."<br>";
-				
+					$check = mysqli_affected_rows($link);				
+					echo $check;
 					
 					
 		}
-	} 
+	} echo "<br>".$sql;
 	
 	$ko=0;
 		for ($bo=0; $bo<8; $bo++){
@@ -78,7 +77,7 @@ if (isset($_SESSION['usuario']))
 					mysqli_query($link,$sqloct);
 					$check1 = mysqli_affected_rows($link);
 					echo "<br>".$check1."<br>";
-		}			
+		}		echo "<br>".$sqloct;	
 					
 //INCIO CUARTOS DE FINAL
 
@@ -121,7 +120,7 @@ if (isset($_SESSION['usuario']))
 					mysqli_query($link,$sqlcua);
 					$check2 = mysqli_affected_rows($link);
 					echo "<br>".$check2."<br>";
-		}
+		}echo "<br>".$sqlcua;
 
 //INICIO DE SEMIFINAL
 
@@ -170,7 +169,7 @@ $ks=0;
 					mysqli_query($link,$sqlsem);
 					$check3 = mysqli_affected_rows($link);
 					echo "<br>".$check3."<br>";
-		}
+		}echo "<br>".$sqlsem;
 
 //INICIO DE TERCER Y CUARTO PUESTO
 
@@ -208,6 +207,7 @@ $ks=0;
 					mysqli_query($link,$sqltercer);
 					$check4 = mysqli_affected_rows($link);
 					echo "<br>".$check4."<br>";
+					echo "<br>".$sqltercer;
 					
 //INICIO DE FINAL
 
@@ -245,6 +245,7 @@ $ks=0;
 					mysqli_query($link,$sqlfinal);
 					$check5 = mysqli_affected_rows($link);
 					echo "<br>".$check5."<br>";
+					echo "<br>".$sqltfinal;
 
 //INICIO DE CAMPEON
 
@@ -258,6 +259,7 @@ $ks=0;
 					mysqli_query($link,$sqlcampeon);
 					$check6 = mysqli_affected_rows($link);
 					echo "<br>".$check6."<br>";
+					echo "<br>".$sqltcampeon;
 mysqli_close($link);
 }
     ?>
