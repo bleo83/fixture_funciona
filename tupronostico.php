@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!="FALSE"))
+if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 {
 
     require "conexion.php";
@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!="FALSE"))
 	$resultado = mysqli_query($link,$sqluser);
 	$resultado2 = mysqlI_fetch_assoc ($resultado);
 	
-	$userlogin = $resultado2 [id];
+	$userlogin = $resultado2 ['id'];
 	
 	//INCIO GRUPOS
 	

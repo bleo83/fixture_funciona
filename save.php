@@ -1,8 +1,8 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!="TRUE"))
+if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=true))
 {
-$_SESSION['fixture']="TRUE";
+$_SESSION['fixture']=true;
 ?>
 
 <!DOCTYPE html>
