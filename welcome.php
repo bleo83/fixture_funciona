@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario']))
 <div class="contenedor">
     <h1>BIENVENIDO : <?php echo $_SESSION['usuario']; ?></h1><hr>
     <img src="welcome.png" alt="" >
-    <p>Aquí te toca poner todo lo que que solo tus usuario registrados pueden ver. :)</p>
+    <p>Aquí te toca poner todo lo que solo tus usuario registrados pueden ver. :)</p>
     <p><a href="logout.php">CERRAR SESIÓN</a></p>
 </div>
 </body>

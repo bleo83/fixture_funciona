@@ -60,8 +60,7 @@ $userlogin = $_SESSION['usuario'];
 		<h1>BIENVENIDO : <?php echo $_SESSION['usuario']; ?></h1><hr>
 		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>World Cup 2014</b></h1>
 		<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
-			 Demostrá lo que sabés de fútbol<br>
-			 aposta en Fixture '14.</b>
+			 Mundial Rusia 2018</b>
 			 
 		</p>
 		<p><a href="logout.php">CERRAR SESIÓN</a></p>
