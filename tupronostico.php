@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
+if (isset($_SESSION['usuario']))
 {
 
     require "conexion.php";
@@ -29,11 +29,11 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 				
 				$sqlg ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".${"group$letra"}[$i][0]." ORDER BY id ASC";
 				$resug= mysqli_query($link,$sqlg);
-				$resug1 = mysqlI_fetch_assoc ($resug);
+				$resug1= mysqlI_fetch_assoc ($resug);
 				
 				
-				${"group$letra"}[$i][3]= $resug1[gl];
-				${"group$letra"}[$i][4]= $resug1[gv];
+				${"group$letra"}[$i][3]= $resug1['gl'];
+				${"group$letra"}[$i][4]= $resug1['gv'];
 			
 		}
 	}
@@ -49,15 +49,15 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 			$resuo1 = mysqlI_fetch_assoc ($resuo);
 			
 			
-			$octavos[$bo][2] = $resuo1 [equipol];
-			$octavos[$bo][3] = $resuo1 [equipov];
-			$octavos[$bo][4] = $resuo1 [gl];
-			$octavos[$bo][5] = $resuo1 [gv];
+			$octavos[$bo][2] = $resuo1 ['equipol'];
+			$octavos[$bo][3] = $resuo1 ['equipov'];
+			$octavos[$bo][4] = $resuo1 ['gl'];
+			$octavos[$bo][5] = $resuo1 ['gv'];
 			
 			
-			if (($resuo1 [gpl] >0) || ($resuo1 [gpv] >0)){
-			$octavos[$bo][6] = $resuo1 [gpl];
-			$octavos[$bo][7] = $resuo1 [gpv];
+			if (($resuo1 ['gpl'] >0) || ($resuo1 ['gpv'] >0)){
+			$octavos[$bo][6] = $resuo1 ['gpl'];
+			$octavos[$bo][7] = $resuo1 ['gpv'];
 				
 			}
 		}			
@@ -72,15 +72,15 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 			$resuc1 = mysqlI_fetch_assoc ($resuc);
 			
 			
-			$cuartos[$bc][2] = $resuc1 [equipol];
-			$cuartos[$bc][3] = $resuc1 [equipov];
-			$cuartos[$bc][4] = $resuc1 [gl];
-			$cuartos[$bc][5] = $resuc1 [gv];
+			$cuartos[$bc][2] = $resuc1 ['equipol'];
+			$cuartos[$bc][3] = $resuc1 ['equipov'];
+			$cuartos[$bc][4] = $resuc1 ['gl'];
+			$cuartos[$bc][5] = $resuc1 ['gv'];
 			
 			
-			if (($resuc1 [gpl] >0) || ($resuc1 [gpv] >0)){
-			$cuartos[$bc][6] = $resuc1 [gpl];
-			$cuartos[$bc][7] = $resuc1 [gpv];
+			if (($resuc1 ['gpl'] >0) || ($resuc1 ['gpv'] >0)){
+			$cuartos[$bc][6] = $resuc1 ['gpl'];
+			$cuartos[$bc][7] = $resuc1 ['gpv'];
 				
 			}		
 			
@@ -94,14 +94,14 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 			$resus= mysqli_query($link,$sqls);
 			$resus1 = mysqlI_fetch_assoc ($resus);
 			
-			$semi[$bs][2] = $resus1 [equipol];
-			$semi[$bs][3] = $resus1 [equipov];
-			$semi[$bs][4] = $resus1 [gl];
-			$semi[$bs][5] = $resus1 [gv];			
+			$semi[$bs][2] = $resus1 ['equipol'];
+			$semi[$bs][3] = $resus1 ['equipov'];
+			$semi[$bs][4] = $resus1 ['gl'];
+			$semi[$bs][5] = $resus1 ['gv'];			
 			
-		if (($resus1 [gpl] >0) || ($resus1 [gpv] >0)){
-			$semi[$bs][6] = $resus1 [gpl];
-			$semi[$bs][7] = $resus1 [gpv];
+		if (($resus1 ['gpl'] >0) || ($resus1 ['gpv'] >0)){
+			$semi[$bs][6] = $resus1 ['gpl'];
+			$semi[$bs][7] = $resus1 ['gpv'];
 				
 			}
 			
@@ -116,14 +116,14 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 			$resut1 = mysqlI_fetch_assoc ($resut);
 			
 			
-			$tercer[0][2] = $resut1 [equipol];
-			$tercer[0][3] = $resut1 [equipov];
-			$tercer[0][4] = $resut1 [gl];
-			$tercer[0][5] = $resut1 [gv];
+			$tercer[0][2] = $resut1 ['equipol'];
+			$tercer[0][3] = $resut1 ['equipov'];
+			$tercer[0][4] = $resut1 ['gl'];
+			$tercer[0][5] = $resut1 ['gv'];
 						
-			if (($resut1 [gpl] >0) || ($resut1 [gpv] >0)){
-			$tercer[0][6] = $resut1 [gpl];
-			$tercer[0][7] = $resut1 [gpv];
+			if (($resut1 ['gpl'] >0) || ($resut1 ['gpv'] >0)){
+			$tercer[0][6] = $resut1 ['gpl'];
+			$tercer[0][7] = $resut1 ['gpv'];
 			}
 
 //FINAL
@@ -133,14 +133,14 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 			$resuf1 = mysqlI_fetch_assoc ($resuf);
 			
 			
-			$final[0][2] = $resuf1 [equipol];
-			$final[0][3] = $resuf1 [equipov];
-			$final[0][4] = $resuf1 [gl];
-			$final[0][5] = $resuf1 [gv];
+			$final[0][2] = $resuf1 ['equipol'];
+			$final[0][3] = $resuf1 ['equipov'];
+			$final[0][4] = $resuf1 ['gl'];
+			$final[0][5] = $resuf1 ['gv'];
 			
-			if (($resuf1 [gpl] >0) || ($resuf1 [gpv] >0)){
-			$final[0][6] = $resuf1 [gpl];
-			$final[0][7] = $resuf1 [gpv];
+			if (($resuf1 ['gpl'] >0) || ($resuf1 ['gpv'] >0)){
+			$final[0][6] = $resuf1 ['gpl'];
+			$final[0][7] = $resuf1 ['gpv'];
 				
 			}
 ?>
@@ -249,7 +249,7 @@ if (isset($_SESSION['usuario'])&&($_SESSION['fixture']!=false))
 										<td width="2"><img src="banderas/<?php echo ${"group$letra"}[$i][2]?>.png" alt="imagen"/> </td>
 										<td id="pais<?php echo $name?>l"  align="center" ><?php echo ${"group$letra"}[$i][2]?></td>
 										<td width="2"><input readonly = "readonly"style="max-width:50px "  type="number" min="0" max="9" size="2" id="gol<?php echo $name?>l" name="gol<?php echo $name?>l" value="<?php echo ${"group$letra"}[$i][3]?>" onchange="recalculando('<?php echo $letra?>')" onblur="recalculando('<?php echo $letra?>')"
-										onkeypress="return isNumber(event)" /><?php echo $golgl;?></td>
+										onkeypress="return isNumber(event)" /></td>
 										
 										</div>
 									
