@@ -11,174 +11,8 @@ if (isset($_SESSION['usuario']))
 	$user = $_SESSION['usuario'];
 
 ?>
-
-	<form method="post" >
-	<select name="user_id" id="user_id">
-		
-		<?php 
-			
-			/*$sqluser ="SELECT id FROM user WHERE user ='$user' ";
-			
-			$resultado1 = mysqli_query($link,$sqluser);
-			$resultado2 = mysqlI_fetch_assoc ($resultado1);
 	
-			$userlogin = $resultado2 ['id'];
-			*/
 
-			$sql="SELECT id,user  FROM user";
-
-			$resultado=mysqli_query($link,$sql); // ejecuto la consulta sql
-
-
-			while ($fila=mysqli_fetch_assoc ($resultado)){
-								
-				if($fila['user_id'] == $id){
-					$selected="selected";
-					$selected="selectid";
-				}else{
-					$selected="";
-				} ?>
-
-					<option selected="<?php echo $selected,$selectid;  ?>" value=<?php echo $fila['user']; ?></option>
-
-			<?php echo $userlogin=$selectid ?>
-
-	</select>
-	</form>
-
-	<?php 
-
-	//FIN DE COMBO DE USUARIOS	
-	
-	//INCIO GRUPOS
-	
-			
-	for ($l=0; $l <8 ; $l++){
-		$k=0;
-		for ($i=0; $i<6; $i++){
-		
-				$k++;
-				$name=$gname[$l].$k;
-				$letra=$gname[$l];
-				
-				$sqlg ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".${"group$letra"}[$i][0]." ORDER BY id ASC";
-				$resug= mysqli_query($link,$sqlg);
-				$resug1 = mysqlI_fetch_assoc ($resug);
-				
-				
-				${"group$letra"}[$i][3]= $resug1['gl'];
-				${"group$letra"}[$i][4]= $resug1['gv'];
-			
-		}
-	}
-	//INCIO OCTAVOS DE FINAL
-		
-
-		
-		for ($bo=0; $bo<8; $bo++){
-			
-			
-		$sqlo ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".$octavos[$bo][0]." ORDER BY id ASC";
-			$resuo= mysqli_query($link,$sqlo);
-			$resuo1 = mysqlI_fetch_assoc ($resuo);
-			
-			
-			$octavos[$bo][2] = $resuo1 ['equipol'];
-			$octavos[$bo][3] = $resuo1 ['equipov'];
-			$octavos[$bo][4] = $resuo1 ['gl'];
-			$octavos[$bo][5] = $resuo1 ['gv'];
-			
-			
-			if (($resuo1 ['gpl'] >0) || ($resuo1 ['gpv'] >0)){
-			$octavos[$bo][6] = $resuo1 ['gpl'];
-			$octavos[$bo][7] = $resuo1 ['gpv'];
-				
-			}
-		}			
-	//INCIO CUARTOS DE FINAL
-			
-			
-	
-		for ($bc=0; $bc<4; $bc++){
-			
-			$sqlc ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".$cuartos[$bc][0]." ORDER BY id ASC";
-			$resuc= mysqli_query($link,$sqlc);
-			$resuc1 = mysqlI_fetch_assoc ($resuc);
-			
-			
-			$cuartos[$bc][2] = $resuc1 ['equipol'];
-			$cuartos[$bc][3] = $resuc1 ['equipov'];
-			$cuartos[$bc][4] = $resuc1 ['gl'];
-			$cuartos[$bc][5] = $resuc1 ['gv'];
-			
-			
-			if (($resuc1 ['gpl'] >0) || ($resuc1 ['gpv'] >0)){
-			$cuartos[$bc][6] = $resuc1 ['gpl'];
-			$cuartos[$bc][7] = $resuc1 ['gpv'];
-				
-			}		
-			
-		}
-
-//INICIO DE SEMIFINAL
-		
-
-		for ($bs=0; $bs<2; $bs++){
-			$sqls ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".$semi[$bs][0]." ORDER BY id ASC";
-			$resus= mysqli_query($link,$sqls);
-			$resus1 = mysqlI_fetch_assoc ($resus);
-			
-			$semi[$bs][2] = $resus1 ['equipol'];
-			$semi[$bs][3] = $resus1 ['equipov'];
-			$semi[$bs][4] = $resus1 ['gl'];
-			$semi[$bs][5] = $resus1 ['gv'];			
-			
-		if (($resus1 ['gpl'] >0) || ($resus1 ['gpv'] >0)){
-			$semi[$bs][6] = $resus1 ['gpl'];
-			$semi[$bs][7] = $resus1 ['gpv'];
-				
-			}
-			
-
-		}
-
-//INICIO DE TERCER Y CUARTO PUESTO
-			
-
-			$sqlt ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".$tercer[0][0]." ORDER BY id ASC";
-			$resut= mysqli_query($link,$sqlt);
-			$resut1 = mysqlI_fetch_assoc ($resut);
-			
-			
-			$tercer[0][2] = $resut1 ['equipol'];
-			$tercer[0][3] = $resut1 ['equipov'];
-			$tercer[0][4] = $resut1 ['gl'];
-			$tercer[0][5] = $resut1 ['gv'];
-						
-			if (($resut1 ['gpl'] >0) || ($resut1 ['gpv'] >0)){
-			$tercer[0][6] = $resut1 ['gpl'];
-			$tercer[0][7] = $resut1 ['gpv'];
-			}
-
-//FINAL
-			
-			$sqlf ="SELECT * FROM pronostico WHERE iduser = '$userlogin' AND idpartido = ".$final[0][0]." ORDER BY id ASC";
-			$resuf= mysqli_query($link,$sqlf);
-			$resuf1 = mysqlI_fetch_assoc ($resuf);
-			
-			
-			$final[0][2] = $resuf1 ['equipol'];
-			$final[0][3] = $resuf1 ['equipov'];
-			$final[0][4] = $resuf1 ['gl'];
-			$final[0][5] = $resuf1 ['gv'];
-			
-			if (($resuf1 ['gpl'] >0) || ($resuf1 ['gpv'] >0)){
-			$final[0][6] = $resuf1 ['gpl'];
-			$final[0][7] = $resuf1 ['gpv'];
-				
-			}
-			;
-?>
 
 
 <!DOCTYPE html>
@@ -233,8 +67,172 @@ if (isset($_SESSION['usuario']))
 		
 
 
-	</div>
-	</section>
+	
+
+	<form  method="POST" >
+	<select name="user_id" onchange="submit()" >
+	
+	<?php
+		$userlogin=$_POST['user_id'];
+		$sql="SELECT id,user  FROM user";
+		$rec=mysqli_query($link,$sql); // ejecuto la consulta sql
+		while ($fila=mysqli_fetch_assoc ($rec))
+		{
+	
+		echo "<option value='".$fila['id']."'";
+		if($_POST['user_id']==$fila['id'])
+		echo " SELECTED ";
+		echo ">";
+		echo $fila['user'];
+		echo "</option>";
+
+	}  
+	?>
+
+	</select>
+	</form>
+
+<?php
+
+
+	//FIN DE COMBO DE USUARIOS	
+	
+	//INCIO GRUPOS
+	
+			
+	for ($l=0; $l <8 ; $l++){
+		$k=0;
+		for ($i=0; $i<6; $i++){
+		
+				$k++;
+				$name=$gname[$l].$k;
+				$letra=$gname[$l];
+				
+				$sqlg ="SELECT * FROM pronostico WHERE iduser =".$userlogin." AND idpartido = ".${"group$letra"}[$i][0]." ORDER BY id ASC";
+				$resug= mysqli_query($link,$sqlg);
+				$resug1 = mysqlI_fetch_assoc ($resug);
+				
+				
+				${"group$letra"}[$i][3]= $resug1['gl'];
+				${"group$letra"}[$i][4]= $resug1['gv'];
+			
+		}
+	}
+	//INCIO OCTAVOS DE FINAL
+		
+
+		
+		for ($bo=0; $bo<8; $bo++){
+			
+			
+		$sqlo ="SELECT * FROM pronostico WHERE iduser =".$userlogin." AND idpartido = ".$octavos[$bo][0]." ORDER BY id ASC";
+			$resuo= mysqli_query($link,$sqlo);
+			$resuo1 = mysqlI_fetch_assoc ($resuo);
+			
+			
+			$octavos[$bo][2] = $resuo1 ['equipol'];
+			$octavos[$bo][3] = $resuo1 ['equipov'];
+			$octavos[$bo][4] = $resuo1 ['gl'];
+			$octavos[$bo][5] = $resuo1 ['gv'];
+			
+			
+			if (($resuo1 ['gpl'] >0) || ($resuo1 ['gpv'] >0)){
+			$octavos[$bo][6] = $resuo1 ['gpl'];
+			$octavos[$bo][7] = $resuo1 ['gpv'];
+				
+			}
+		}			
+	//INCIO CUARTOS DE FINAL
+			
+			
+	
+		for ($bc=0; $bc<4; $bc++){
+			
+			$sqlc ="SELECT * FROM pronostico WHERE iduser =".$userlogin." AND idpartido = ".$cuartos[$bc][0]." ORDER BY id ASC";
+			$resuc= mysqli_query($link,$sqlc);
+			$resuc1 = mysqlI_fetch_assoc ($resuc);
+			
+			
+			$cuartos[$bc][2] = $resuc1 ['equipol'];
+			$cuartos[$bc][3] = $resuc1 ['equipov'];
+			$cuartos[$bc][4] = $resuc1 ['gl'];
+			$cuartos[$bc][5] = $resuc1 ['gv'];
+			
+			
+			if (($resuc1 ['gpl'] >0) || ($resuc1 ['gpv'] >0)){
+			$cuartos[$bc][6] = $resuc1 ['gpl'];
+			$cuartos[$bc][7] = $resuc1 ['gpv'];
+				
+			}		
+			
+		}
+
+//INICIO DE SEMIFINAL
+		
+
+		for ($bs=0; $bs<2; $bs++){
+			$sqls ="SELECT * FROM pronostico WHERE iduser =".$userlogin." AND idpartido = ".$semi[$bs][0]." ORDER BY id ASC";
+			$resus= mysqli_query($link,$sqls);
+			$resus1 = mysqlI_fetch_assoc ($resus);
+			
+			$semi[$bs][2] = $resus1 ['equipol'];
+			$semi[$bs][3] = $resus1 ['equipov'];
+			$semi[$bs][4] = $resus1 ['gl'];
+			$semi[$bs][5] = $resus1 ['gv'];			
+			
+		if (($resus1 ['gpl'] >0) || ($resus1 ['gpv'] >0)){
+			$semi[$bs][6] = $resus1 ['gpl'];
+			$semi[$bs][7] = $resus1 ['gpv'];
+				
+			}
+			
+
+		}
+
+//INICIO DE TERCER Y CUARTO PUESTO
+			
+
+			$sqlt ="SELECT * FROM pronostico WHERE iduser =".$userlogin." AND idpartido = ".$tercer[0][0]." ORDER BY id ASC";
+			$resut= mysqli_query($link,$sqlt);
+			$resut1 = mysqlI_fetch_assoc ($resut);
+			
+			
+			$tercer[0][2] = $resut1 ['equipol'];
+			$tercer[0][3] = $resut1 ['equipov'];
+			$tercer[0][4] = $resut1 ['gl'];
+			$tercer[0][5] = $resut1 ['gv'];
+						
+			if (($resut1 ['gpl'] >0) || ($resut1 ['gpv'] >0)){
+			$tercer[0][6] = $resut1 ['gpl'];
+			$tercer[0][7] = $resut1 ['gpv'];
+			}
+
+//FINAL
+			
+			$sqlf ="SELECT * FROM pronostico WHERE iduser =".$userlogin." AND idpartido = ".$final[0][0]." ORDER BY id ASC";
+			$resuf= mysqli_query($link,$sqlf);
+			$resuf1 = mysqlI_fetch_assoc ($resuf);
+			
+			
+			$final[0][2] = $resuf1 ['equipol'];
+			$final[0][3] = $resuf1 ['equipov'];
+			$final[0][4] = $resuf1 ['gl'];
+			$final[0][5] = $resuf1 ['gv'];
+			
+			if (($resuf1 ['gpl'] >0) || ($resuf1 ['gpv'] >0)){
+			$final[0][6] = $resuf1 ['gpl'];
+			$final[0][7] = $resuf1 ['gpv'];
+				
+			}
+			;
+?>	
+
+
+
+
+</div>
+</section>
+
 	<div class="wrapsemibox">
 		
 

@@ -11,8 +11,8 @@ if (isset($_SESSION['usuario']))
 		
 	 //Combo de Usuarios ?>
 	
-	<form  method="POST" >
-	<select name="user_id" onchange="submit()" >
+	<form  method="post" >
+	<select name="user_id" id="user_id" >
 	
 	<?php
 
@@ -20,14 +20,9 @@ if (isset($_SESSION['usuario']))
 		$rec=mysqli_query($link,$sql); // ejecuto la consulta sql
 		while ($fila=mysqli_fetch_assoc ($rec))
 		{
-	
-		echo "<option value='".$fila['id']."'";
-		if($_POST['user_id']==$fila['id'])
-		echo " SELECTED ";
-		echo ">";
-		echo $fila['user'];
-		echo "</option>";
-
+	?>	
+		<option selected="<?php echo "selected"; ?>" value="<?php echo $fila['id']; ?>"><?php echo $fila['user']; ?></option>
+	<?php
 	}  
 	?>
 
