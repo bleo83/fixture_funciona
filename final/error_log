@@ -1,3 +1,0 @@
-[03-Jun-2014 04:07:33 UTC] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/bleo83/public_html/funciona/guardar_fixture.php on line 16
-[04-Jun-2014 15:42:08 UTC] PHP Fatal error:  Call to undefined function sqlite_last_insert_rowid() in /home/bleo83/public_html/funciona/guardar_fixture.php on line 223
-[04-Jun-2014 15:50:21 UTC] PHP Fatal error:  Call to undefined function sqlite_last_insert_rowid() in /home/bleo83/public_html/funciona/guardar_fixture.php on line 269
