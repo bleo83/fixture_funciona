@@ -1,22 +1,27 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario']))
+    require "conexion.php";
+	include "partidos.php";
+	
+	$user = $_SESSION['usuario'];
+	
+	
+	$sqluser ="SELECT fixture_completo FROM user WHERE user ='$user' ";
+	
+	$inicio = mysqli_query($link,$sqluser);
+	$inicio2 = mysqlI_fetch_assoc ($inicio);
+	
+	$fixture = $inicio2 ['fixture_completo'];
+
+
+if (isset($_SESSION['usuario'])&&($fixture ==0))
 {
+
+    include 'Equipo.php';
+	include 'calculo.php';
+	$titulo = "Grupo A";
+	include 'partidos.php';
 ?>
-<?php
-include 'Equipo.php';
-include 'calculo.php';
-$titulo = "Grupo A";
-include 'partidos.php'
-
-?>
-<?php
-$userlogin = $_SESSION['usuario'];
-
- 
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +29,7 @@ $userlogin = $_SESSION['usuario'];
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>World Cup 2014</title>
+<title>Copa del Mundo Rusia 2018</title>
 <!-- Style -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -47,7 +52,8 @@ $userlogin = $_SESSION['usuario'];
 	<link href="css/ie8.css" rel="stylesheet">
 	 <![endif]-->
 </head>
-<body style="background: black;" onload="refrezcarCalculos()">
+<body style="background-image: url('img/demo/rusia2018.jpg');" onload="refrezcarCalculos()">
+
 <!-- /.wrapbox start-->
 
 	<!-- TOP AREA
@@ -58,10 +64,10 @@ $userlogin = $_SESSION['usuario'];
 	<section class="pageheader-default text-center">
 	<div class ="semitransparentbg">
 		<h1>BIENVENIDO : <?php echo $_SESSION['usuario']; ?></h1><hr>
-		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>World Cup 2014</b></h1>
+		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>Copa del Mundo Rusia 2018</b></h1>
 		<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
-			 Demostrá lo que sabés de fútbol<br>
-			 aposta en Fixture '14.</b>
+			 Carga tu pronóstico<br>
+			 y comenzá a participar</b>
 			 
 		</p>
 		<p><a href="logout.php">CERRAR SESIÓN</a></p>
@@ -571,6 +577,6 @@ $userlogin = $_SESSION['usuario'];
 		}
 	});
 </script>
-<?php }else {header('Location: index.php');}?>
+<?php }else {header('Location: tupronostico.php');}?>
 </body>
 </html>

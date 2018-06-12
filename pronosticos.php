@@ -58,10 +58,10 @@ if (isset($_SESSION['usuario']))
 		<h1>BIENVENIDO : <?php echo $_SESSION['usuario']; ?></h1>
 		<h4><a href="logout.php">CERRAR SESIÓN</a></h4>
 		<hr>
-		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>World Cup 2014</b></h1>
+		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>World Cup Rusia 2018</b></h1>
 		<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
-			 Ya estás Participando del torneo<br>
-			 Este es tu pronóstico...!!</b>
+			 Observa el pronóstico de los participantes<br>
+			 Selecciona el Usuario</b>
 			 
 		</p>
 		

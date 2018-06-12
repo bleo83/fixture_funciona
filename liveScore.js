@@ -412,6 +412,9 @@ function getBandera(pais) {
         case "Japon":
             return "banderas/Japon.png";
             break;
+        case "Uruguay":
+            return "banderas/Uruguay.png";
+            break;
        
         
 

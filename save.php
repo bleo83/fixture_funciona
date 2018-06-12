@@ -12,7 +12,7 @@ $_SESSION['fixture']=true;
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>World Cup 2014</title>
+<title>Copa del Mundo Rusia 2018</title>
 <!-- Style -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -38,7 +38,7 @@ $_SESSION['fixture']=true;
 
 	 
 </head>
-<body style="background: black;">
+<body style="background-image: url('img/demo/rusia2018.jpg');" >
 <!-- /.wrapbox start-->
 
 	<!-- TOP AREA
@@ -48,7 +48,7 @@ $_SESSION['fixture']=true;
 
 	
 	<div class ="semitransparentbg">
-		<h1 class="animated fadeInLeftBig notransition" style="color:yellow; text-align: center" ><b></b>World Cup 2014</b></h1>
+		<h1 class="animated fadeInLeftBig notransition" style="color:yellow; text-align: center" ><b></b>Copa del Mundo Rusia 2018</b></h1>
 		<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
 			 <br> FELICITACIONES YA ESTÁS PARTICIPANDO</b>
 		</p><br><br><br>
@@ -78,7 +78,7 @@ $_SESSION['fixture']=true;
 </center>
 <script type="text/javascript">
 //<![CDATA[
-<!--
+
 
 var targetURL="tupronostico.php"
 var countdownfrom=10

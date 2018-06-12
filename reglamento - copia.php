@@ -1,9 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['usuario']))
-
 {
-   	$fixture_completo = isset($_SESSION['fixture_complete']);
+   
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +84,7 @@ Ejemplo: Rusia 2 VS Egipto 1
 
 <p style="color:yellow;text-align: left; font-size: 14px">
 
-El PARTICIPANTE que acierte el triunfo de Rusia obtendrá 1 punto 
+El PARTICIPANTE que acierte el triunfo de Grecia obtendrá 1 punto 
 <br>El PARTICIPANTE que acierte el triunfo y además el resultado exacto obtendrá un punto adicional, o sea 2 puntos
 
 <br><br>2° FASE:
@@ -103,9 +102,7 @@ El PARTICIPANTE que acierte el triunfo de Rusia obtendrá 1 punto
             
             </p>               
 			</div>
-             <?php 
-
-             if ($fixture_completo==FALSE){ ?>
+             <?php if ($_SESSION['fixture']!="TRUE"){ ?>
               <a href="grupos.php" class="btn btn-success">Acepto</a>
               <a href="logout.php" class="btn btn-success">NO Acepto</a>
             	<?php }?>

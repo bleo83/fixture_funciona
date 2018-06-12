@@ -38,7 +38,6 @@ if (isset($_SESSION['usuario'])){
 											  ".${"group$letra"}[$i][4].",0,0)";
 					mysqli_query($link,$sql);
 					$check = mysqli_affected_rows($link);				
-					echo "<br>".$sql."<br>";
 					
 					
 		}
@@ -84,10 +83,9 @@ if (isset($_SESSION['usuario'])){
 											  ".$octavos[$bo][7].")";
 					mysqli_query($link,$sqloct);
 					$check1 = mysqli_affected_rows($link);
-										echo $check1;
 
 					
-		}		echo $sqloct;	
+		}			
 					
 //INCIO CUARTOS DE FINAL
 

@@ -167,7 +167,7 @@ if (isset($_SESSION['usuario'])&&($fixture ==1))
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>World Cup 2014</title>
+<title>World Cup Rusia 2018</title>
 <!-- Style -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -190,7 +190,8 @@ if (isset($_SESSION['usuario'])&&($fixture ==1))
 	<link href="css/ie8.css" rel="stylesheet">
 	 <![endif]-->
 </head>
-<body style="background: #333;" onload="refrezcarCalculos()">
+<body style="background-image: url('img/demo/rusia2018.jpg');" onload="refrezcarCalculos()">
+
 <!-- /.wrapbox start-->
 
 	<!-- TOP AREA
@@ -201,9 +202,9 @@ if (isset($_SESSION['usuario'])&&($fixture ==1))
 	<section class="pageheader-default text-center">
 	<div class ="semitransparentbg">
 		<h1>BIENVENIDO : <?php echo $_SESSION['usuario']; ?></h1>
-		<h4><a href="logout.php">CERRAR SESIÓN</a></h4>
+		<h4><a style="color:red;" href="logout.php">CERRAR SESIÓN</a></h4>
 		<hr>
-		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>World Cup 2014</b></h1>
+		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>Copa del Mundo Rusia 2018</b></h1>
 		<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
 			 Ya estás Participando del torneo<br>
 			 Este es tu pronóstico...!!</b>
@@ -343,12 +344,7 @@ if (isset($_SESSION['usuario'])&&($fixture ==1))
 										<i class="fontawesome-icon medium circle-white center icon-arrow-down"></i>
 										</a>
 										</div>
-										<div >
-										<!--<a class="btn btn-primary" onclick="rellenoAutomatico()">-->
-										<i class="icon-refresh icon-random"></i> Carga Automática...</a>
-																				
-										</div>
-							
+										
 										</div>
 										
 										</div>
@@ -688,11 +684,11 @@ if (isset($_SESSION['usuario'])&&($fixture ==1))
 				<td   style ="background: transparent;margin:center">
 				<input readonly = "readonly"type="text"  style ="background: transparent; color: yellow; alignment-adjust:center; margin: center" id="capais" name="capais"  align="center" value="">
 				</td>
-					<br><br>
-			<input readonly = "readonly"style="max-width:1000px" class="btn btn-success" disabled="disabled" type="submit" value="No lo puedes Modificar">
+					
+			<h4><a   style="color:red; text-align: center;" href="logout.php">CERRAR SESIÓN</a></h4>
 				</div>
 			
-				
+					
 				</form>
 			<br><br><br><br>
 			

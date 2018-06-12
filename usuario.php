@@ -15,7 +15,7 @@ else
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>World Cup 2014</title>
+<title>Copa Mundial Rusia 2018</title>
 <!-- Style -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -43,15 +43,15 @@ else
 
   function redirection(){  
 
-  window.location ="http://www.dominio.com";
+  window.location ="http://familia.traemelaco.com/";
 
-  }  setTimeout ("redirection()", 10000); //tiempo en milisegundos
+  }  setTimeout ("redirection()", 5000); //tiempo en milisegundos
 
   </script>
 
 	 
 </head>
-<body style="background: black;">
+<body style="background-image: url('img/demo/rusia2018.jpg');" >
 <!-- /.wrapbox start-->
 
 	<!-- TOP AREA
@@ -61,7 +61,7 @@ else
 
 	<section class="pageheader-default text-center">
 	<div class ="semitransparentbg">
-		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>World Cup 2014</b></h1>
+		<h1 class="animated fadeInLeftBig notransition" style="color:yellow" ><b></b>Copa Mundial Rusia 2018</b></h1>
 		<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
 			  FELICITACIONES YA ESTÁS PARTICIPANDO</b>
 		</p>
@@ -78,13 +78,13 @@ else
 			
 			<p class="animated fadeInRightBig  notransition container page-description" style="color:white"><b>
 			  TU PRONÓSTICO SE HA GUARDADO CON ÉXITO<br> 
-			 Serás redireccionado en 10 Segundos </b><br>
-			 <h5>En caso contrario, pulsa en el siguiente enlace<h5>
+			 Serás redireccionado en 5 Segundos </b><br>
+			 <p class="animated fadeInRightBig  notransition container page-description" style="color:grey">En caso contrario, pulsa en el siguiente enlace<p>
 			 
 	                          
 			<div >
 				<br><br><br>
-				<a href="index.php" class="buttonblack">&nbsp; Accede a tu cuenta...</a>
+				<a href="http://familia.traemelaco.com/" class="buttonblack">&nbsp; Accede a tu cuenta...</a>
 			
 																				
 			</div>
@@ -95,82 +95,15 @@ else
 			</div>
 			
 		</div>
+		<br><br><br>
 		</section>
-		
+		<br><br><br>
 		<!-- TEAM
 
 	
 	<!-- BEGIN FOOTER
 ================================================== -->
-	<section>
-	<div class="footer">
-		<div class="container animated fadeInUpNow notransition">
-			<div class="row">
-				<div class="col-md-4">
-					<h1 class="footerbrand">LBCS</h1>
-					<p>
-						 Participá con tus amigos en tufixture.com
-					</p>
-					<p>
-						 Creá tu usuario, cargá tu pronóstico y jugá.
-					</p>
-					<p>
-						 Made with &nbsp;<i class="icon-heart"></i>&nbsp; by tufixture.com
-					</p>
-				</div>
-				<div class="col-md-4">
-					<h1 class="title"><span class="colortext">E</span>ncontranos </h1>
-					<div class="footermap">
-						
-						<p>
-							<strong>Email: </strong> soporte@tufixture.com
-						</p>
-						<ul class="social-icons list-soc">
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-google-plus"></i></a></li>
-							<li><a href="#"><i class="icon-skype"></i></a></li>
-						</ul>
-					</div>
-				</div>
-		
-				<div class="col-md-4">
-					<h1 class="title"><span class="colortext">M</span>ensaje <span class="font100">rápido</span></h1>
-					<div class="done">
-						<div class="alert alert-success">
-							<button type="button" class="close" data-dismiss="alert">×</button>
-							Su Mensaje ha sido enviado. Gracias!
-						</div>
-					</div>
-					<form method="post" action="contact.php" id="contactform">
-						<div class="form">
-							<input class="col-md-6" type="text" name="nombre" placeholder="Nombre">
-							<input class="col-md-6" type="text" name="correo" placeholder="E-mail">
-							<textarea class="col-md-12" name="comentario" rows="4" placeholder="Mensaje"></textarea>
-							<input type="submit" id="enviar" class="btn" value="Enviar">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<p id="back-top">
-		<a href="#top"><span></span></a>
-	</p>
-	<div class="copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<p class="pull-left">
-						 &copy; Copyright 2014 tufixture.com
-					</p>
-				</div>
-			
-			</div>
-		</div>
-	</div>
-	</section>
+
 	<!-- /footer section end-->
 </div>
 <!-- /.wrapbox ends-->
