@@ -319,102 +319,102 @@ function getClasGrupo(cod) {
 
 function getBandera(pais) {
     switch (pais) {
-        case "Brasil":
-            return "banderas/Brasil.png";
+        case "Rusia":
+            return "banderas/Rusia.png";
             break;
-        case "Croacia":
-            return "banderas/Croacia.png";
+        case "A.Saudita":
+            return "banderas/A.Saudita.png";
             break;
-        case "Mexico":
-            return "banderas/Mexico.png";
-            break;
-        case "Camerun":
-            return "banderas/Camerun.png";
-            break;
-        case "Espana":
-            return "banderas/Espana.png";
-            break;
-        case "Holanda":
-            return "banderas/Holanda.png";
-            break;
-        case "Chile":
-            return "banderas/Chile.png";
-            break;
-        case "Australia":
-            return "banderas/Australia.png";
-            break;
-        case "Colombia":
-            return "banderas/Colombia.png";
-            break;
-        case "Grecia":
-            return "banderas/Grecia.png";
-            break;
-        case "C. de Marfil":
-            return "banderas/C. de Marfil.png";
-            break;
-        case "Japon":
-            return "banderas/Japon.png";
-            break;
-        case "Uruguay":
-            return "banderas/Uruguay.png";
-            break;
-        case "Costa Rica":
-            return "banderas/Costa Rica.png";
-            break;
-        case "Inglaterra":
-            return "banderas/Inglaterra.png";
-            break;
-        case "Italia":
-            return "banderas/Italia.png";
-            break;
-        case "Suiza":
-            return "banderas/Suiza.png";
-            break;
-        case "Ecuador":
-            return "banderas/Ecuador.png";
-            break;
-        case "Francia":
-            return "banderas/Francia.png";
-            break;
-        case "Honduras":
-            return "banderas/Honduras.png";
-            break;
-        case "Argentina":
-            return "banderas/Argentina.png";
-            break;
-        case "Bosnia":
-            return "banderas/Bosnia.png";
-            break;
-        case "Iran":
-            return "banderas/Iran.png";
-            break;
-        case "Nigeria":
-            return "banderas/Nigeria.png";
-            break;
-        case "Alemania":
-            return "banderas/Alemania.png";
+        case "Egipto":
+            return "banderas/Egipto.png";
             break;
         case "Portugal":
             return "banderas/Portugal.png";
             break;
-        case "Ghana":
-            return "banderas/Ghana.png";
+        case "Espana":
+            return "banderas/Espana.png";
             break;
-        case "EEUU":
-            return "banderas/usa.png";
+        case "Marruecos":
+            return "banderas/Marruecos.png";
+            break;
+        case "Iran":
+            return "banderas/Iran.png";
+            break;
+        case "Francia":
+            return "banderas/Francia.png";
+            break;
+        case "Australia":
+            return "banderas/Australia.png";
+            break;
+        case "Peru":
+            return "banderas/Peru.png";
+            break;
+        case "Dinamarca":
+            return "banderas/Dinamarca.png";
+            break;
+        case "Argentina":
+            return "banderas/Argentina.png";
+            break;
+        case "Islandia":
+            return "banderas/Islandia.png";
+            break;
+        case "Croacia":
+            return "banderas/Croacia.png";
+            break;
+        case "Nigeria":
+            return "banderas/Nigeria.png";
+            break;
+        case "Brasil":
+            return "banderas/Brasil.png";
+            break;
+        case "Suiza":
+            return "banderas/Suiza.png";
+            break;
+        case "Costa Rica":
+            return "banderas/Costa Rica.png";
+            break;
+        case "Serbia":
+            return "banderas/Serbia.png";
+            break;
+        case "Alemania":
+            return "banderas/Alemania.png";
+            break;
+        case "Mexico":
+            return "banderas/Mexico.png";
+            break;
+        case "Suecia":
+            return "banderas/Suecia.png";
+            break;
+        case "Corea":
+            return "banderas/Corea.png";
             break;
         case "Belgica":
             return "banderas/Belgica.png";
             break;
-        case "Argelia":
-            return "banderas/Argelia.png";
+        case "Panama":
+            return "banderas/Panama.png";
             break;
-        case "Rusia":
-            return "banderas/Rusia.png";
+        case "Tunez":
+            return "banderas/Tunez.png";
             break;
-        case "Corea del Sur":
-            return "banderas/Corea del Sur.png";
+        case "Inglaterra":
+            return "banderas/Inglaterra.png";
             break;
+        case "Polonia":
+            return "banderas/Polonia.png";
+            break;
+        case "Senegal":
+            return "banderas/Senegal.png";
+            break;
+        case "Colombia":
+            return "banderas/Colombia.png";
+            break;
+        case "Japon":
+            return "banderas/Japon.png";
+            break;
+       
+        
+
     }
 }
 function getPartidoOct(puestoGrupoStr) {

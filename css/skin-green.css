@@ -1,7 +1,7 @@
 .colortext {	color:#1abc9c;}
 .colorbg {background:#1abc9c;}
 a {	color:#1abc9c;}
-::selection{background:#1abc9c;}
+::selection{background:white;}
 .navbar-nav>li.active>a,.navbar-nav>li.active>a:hover,.navbar-nav>li.active>a:focus {background-color:#1abc9c;}
 .navbar-nav>li.active>a:before,.navbar-nav>li>a:hover:before,.navbar-nav>li>a:focus:before,.extra-nav-class a.dropdown-toggle:before {border-bottom:6px solid #1abc9c;}
 .navbar-nav>li>a:hover,.navbar-nav>li>a:focus {	background-color:#1abc9c;}

@@ -1,6 +1,20 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario']))
+    require "conexion.php";
+	include "partidos.php";
+	
+	$user = $_SESSION['usuario'];
+	
+	
+	$sqluser ="SELECT fixture_completo FROM user WHERE user ='$user' ";
+	
+	$inicio = mysqli_query($link,$sqluser);
+	$inicio2 = mysqlI_fetch_assoc ($inicio);
+	
+	$fixture = $inicio2 ['fixture_completo'];
+
+
+if (isset($_SESSION['usuario'])&&($fixture ==1))
 {
 
     require "conexion.php";
@@ -176,7 +190,7 @@ if (isset($_SESSION['usuario']))
 	<link href="css/ie8.css" rel="stylesheet">
 	 <![endif]-->
 </head>
-<body style="background: black;" onload="refrezcarCalculos()">
+<body style="background: #333;" onload="refrezcarCalculos()">
 <!-- /.wrapbox start-->
 
 	<!-- TOP AREA
